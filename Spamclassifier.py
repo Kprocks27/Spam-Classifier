@@ -35,8 +35,8 @@ def dataFrameFromDirectory(path, classification):
 
 data = DataFrame({'message': [], 'class': []})
 
-data = data.append(dataFrameFromDirectory('C:/users/kproc/Desktop/DataScience-Python3/emails/spam', 'spam'))
-data = data.append(dataFrameFromDirectory('C:/Users/kproc/Desktop/DataScience-Python3/emails/ham', 'ham'))
+data = data.append(dataFrameFromDirectory('C:/users/kproc/Desktop/DataScience-Python3/emails/spam', 'spam')) #Local address for spam email
+data = data.append(dataFrameFromDirectory('C:/Users/kproc/Desktop/DataScience-Python3/emails/ham', 'ham'))   #Local address for Ham Email
 
 vectorizer = CountVectorizer()
 counts = vectorizer.fit_transform(data['message'].values)
